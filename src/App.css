@@ -1,0 +1,25 @@
+
+#app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background:linear-gradient(rgba(248, 151, 126, 0.2), rgba(15,168,198, .5)), url("/public/SC_background1.jpg");
+  background-repeat: no-repeat;                
+  background-position: center;                
+  background-attachment: fixed;                
+  background-size: cover;
+  
+  color: white;
+  height: 100vh;
+}
+
+
+
+
+
+li:hover {
+  background-color: #eaeaea;
+
+}
