@@ -47,7 +47,7 @@ function ReviewForm() {
       event.stopPropagation();
       setValidated(true); 
     } else {
-          if (reviewId) {
+          if (id) {
               try {
               const response = await axios.put(` http://127.0.0.1:5000/reviews`,
                   formData,
@@ -64,7 +64,7 @@ function ReviewForm() {
               } catch(error) {
                 console.log(error)
                 setMessageType("Error")
-                setMessage("Error Updating User to the Server. Please Try Again")
+                setMessage("Error Updating Review to the Server. Please Try Again")
               }
           } else {
             
@@ -85,7 +85,7 @@ function ReviewForm() {
                 } catch(error) {
                   console.log(error)
                   setMessageType("Error")
-                  setMessage("Error Adding User to the Server. Please Try Again")
+                  setMessage("Error Adding Review to the Server. Please Try Again")
                 }
         
           }
@@ -146,7 +146,7 @@ function ReviewForm() {
         label="review"
         className="mb-3 text-dark">
         {/* determine why we can't adjust the Form.Control height with the size attribute */}
-        <Form.Control type="text" size="sm" id="customerId" name="customerId" pattern="[A-Z][a-z]*" placeholder="Customer Id" onChange={handleChange} required/>
+        <Form.Control type="text" size="sm" id="review" name="review" pattern="\w+(?:\s+\w+)**" placeholder="Customer Id" onChange={handleChange} required/>
         <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">Please Enter a Review</Form.Control.Feedback>
         </FloatingLabel>

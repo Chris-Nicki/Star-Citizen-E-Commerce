@@ -45,7 +45,7 @@ function OrderForm() {
       event.stopPropagation();
       setValidated(true); 
     } else {
-          if (productId) {
+          if (id) {
               try {
               const response = await axios.put(` http://127.0.0.1:5000/orders`,
                   formData,
@@ -62,7 +62,7 @@ function OrderForm() {
               } catch(error) {
                 console.log(error)
                 setMessageType("Error")
-                setMessage("Error Updating User to the Server. Please Try Again")
+                setMessage("Error Updating Order to the Server. Please Try Again")
               }
           } else {
             
@@ -83,7 +83,7 @@ function OrderForm() {
                 } catch(error) {
                   console.log(error)
                   setMessageType("Error")
-                  setMessage("Error Adding User to the Server. Please Try Again")
+                  setMessage("Error Adding Order to the Server. Please Try Again")
                 }
         
           }

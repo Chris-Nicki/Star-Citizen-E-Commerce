@@ -47,7 +47,7 @@ function CustomerForm() {
     } else {
           if (id) {
               try {
-              const response = await axios.put(` http://127.0.0.1:5000/customers`,
+              const response = await axios.put(`http://127.0.0.1:5000/customers`,
                   formData,
                   {
                     headers: {
@@ -104,9 +104,9 @@ function CustomerForm() {
       <h3>Add/Edit Customers</h3>
         <FloatingLabel
         htmlFor="name"
-        label="Name"
+        label="First Name Last Name"
         className="mb-3 text-dark">
-        <Form.Control type="text" size="sm" id="name" name="name" pattern="[A-Z][a-z]*\s{0,1}([A-Z][a-z]*)*"placeholder="Name here" onChange={handleChange} required/>
+        <Form.Control type="text" size="sm" id="name" name="name" pattern="[A-Z][a-z]*\s{0,1}([A-Z][a-z]*)* "placeholder="Name here" onChange={handleChange} required/>
         <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">Please Enter a Valid Name</Form.Control.Feedback>
         </FloatingLabel>
@@ -124,7 +124,7 @@ function CustomerForm() {
         htmlFor="email"
         label="Email"
         className="mb-3 text-dark">
-        <Form.Control type="email" id="email" name="email" pattern="[\w.]+@[\w]+[.][a-z]{2,}" placeholder="Email here" onChange={handleChange} required/>
+        <Form.Control type="email" id="email" name="email" pattern="[\w.][\w.]+@[\w]+[.][a-z]{2,}" placeholder="Email here" onChange={handleChange} required/>
         <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">Please Enter a Valid Email</Form.Control.Feedback>
         </FloatingLabel>

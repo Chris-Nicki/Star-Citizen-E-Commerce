@@ -44,9 +44,9 @@ function ProductForm() {
       event.stopPropagation();
       setValidated(true); 
     } else {
-          if (productId) {
+          if (id) {
               try {
-              const response = await axios.put(` http://127.0.0.1:5000/products`,
+              const response = await axios.put(`http://127.0.0.1:5000/products`,
                   formData,
                   {
                     headers: {
@@ -60,7 +60,7 @@ function ProductForm() {
               } catch(error) {
                 console.log(error)
                 setMessageType("Error")
-                setMessage("Error Updating User to the Server. Please Try Again")
+                setMessage("Error Updating Products to the Server. Please Try Again")
               }
           } else {
             
@@ -81,7 +81,7 @@ function ProductForm() {
                 } catch(error) {
                   console.log(error)
                   setMessageType("Error")
-                  setMessage("Error Adding User to the Server. Please Try Again")
+                  setMessage("Error Adding Product to the Server. Please Try Again")
                 }
         
           }
@@ -104,7 +104,7 @@ function ProductForm() {
         htmlFor="name"
         label="Name"
         className="mb-3 text-dark">
-        <Form.Control type="text" size="sm" id="name" name="name" pattern="[A-Z][a-z]*"placeholder="Name here" onChange={handleChange} required/>
+        <Form.Control type="text" size="sm" id="name" name="name" pattern="[A-Z][a-z]* \w+(?:\s+\w+)*"placeholder="Name here" onChange={handleChange} required/>
         <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">Please Enter a Valid Name</Form.Control.Feedback>
         </FloatingLabel>
