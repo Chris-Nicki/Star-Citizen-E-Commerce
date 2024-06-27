@@ -99,7 +99,7 @@ function ProductForm() {
   return (
     <Container>
     <Form noValidate validated={validated} onSubmit={handleSubmit} className="border border-white rounded p-4">
-      <h3>Add/Edit Orders</h3>
+      <h3>Add/Edit Products</h3>
         <FloatingLabel
         htmlFor="name"
         label="Name"

@@ -102,11 +102,10 @@ function CustomerForm() {
     <Container>
     <Form noValidate validated={validated} onSubmit={handleSubmit} className="border border-white rounded p-4">
       <h3>Add/Edit Customers</h3>
-      <FloatingLabel
+        <FloatingLabel
         htmlFor="name"
         label="Name"
         className="mb-3 text-dark">
-        {/* determine why we can't adjust the Form.Control height with the size attribute */}
         <Form.Control type="text" size="sm" id="name" name="name" pattern="[A-Z][a-z]*\s{0,1}([A-Z][a-z]*)*"placeholder="Name here" onChange={handleChange} required/>
         <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">Please Enter a Valid Name</Form.Control.Feedback>
