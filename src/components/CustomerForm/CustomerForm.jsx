@@ -106,7 +106,7 @@ function CustomerForm() {
         htmlFor="name"
         label="First Name Last Name"
         className="mb-3 text-dark">
-        <Form.Control type="text" size="sm" id="name" name="name" pattern="[A-Z][a-z]*\s{0,1}([A-Z][a-z]*)* "placeholder="Name here" onChange={handleChange} required/>
+        <Form.Control type="text" size="sm" id="name" name="name" pattern="[A-Z][a-z]*\s{0,1}([A-Z][a-z]*)*"placeholder="Name here" onChange={handleChange} required/>
         <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">Please Enter a Valid Name</Form.Control.Feedback>
         </FloatingLabel>
