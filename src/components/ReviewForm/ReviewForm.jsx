@@ -136,17 +136,17 @@ function ReviewForm() {
         htmlFor="rating"
         label="Rating"
         className="mb-3 text-dark">
-        <Form.Control type="text" size="sm" id="rating" name="rating" pattern="[\d]{1}" placeholder="Please enter A 1-5 Rating" onChange={handleChange} required/>
+        <Form.Control type="text" size="sm" id="rating" name="rating" pattern="[\d]{1}" placeholder="Please enter a 1-5 rating" onChange={handleChange} required/>
         <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">Please Enter a Rating</Form.Control.Feedback>
         </FloatingLabel>
 
         <FloatingLabel
         htmlFor="review"
-        label="review"
+        label="Review"
         className="mb-3 text-dark">
         {/* determine why we can't adjust the Form.Control height with the size attribute */}
-        <Form.Control type="text" size="sm" id="review" name="review" pattern="\w+(?:\s+\w+)**" placeholder="Customer Id" onChange={handleChange} required/>
+        <Form.Control type="text" size="sm" id="review" name="review" pattern="\w+(?:\s+\w+)**" placeholder="Please enter a review" onChange={handleChange} required/>
         <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">Please Enter a Review</Form.Control.Feedback>
         </FloatingLabel>

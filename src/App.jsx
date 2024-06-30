@@ -34,10 +34,10 @@ function App() {
         <Route path='/edit-orders/:id' element={ <OrderForm />} />
         <Route path='/reviews' element={ <ReviewList />} />
         <Route path='/add-reviews' element={ <ReviewForm />} />
-        <Route path='/edit-reviews' element={ <ReviewForm />} />
+        <Route path='/edit-reviews/:id' element={ <ReviewForm />} />
         <Route path='/products' element={ <ProductList />} />
         <Route path='/add-products' element={ <ProductForm />} />
-        <Route path='/edit-products' element={ <ProductForm />} />
+        <Route path='/edit-products/:id' element={ <ProductForm />} />
       </Routes>
     </div>
   )

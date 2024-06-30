@@ -8,6 +8,7 @@ import axios from 'axios';
 
 //internal import
 import OrderList from '../OrderList/OrderList';
+import Product  from '../ProductList/ProductList'
 
 function CustomerList() {
   const navigate = useNavigate(); 
@@ -48,7 +49,7 @@ function CustomerList() {
     
     async function handleDeleteCustomer(id){
       try {
-        const response = await axios.delete(`http://127.0.0.1:5000/customers${id}`)
+        const response = await axios.delete(`http://127.0.0.1:5000/customers/${id}`)
         console.log(response)
         
         let currentCustomers = [ ...customers ]
@@ -67,9 +68,11 @@ function CustomerList() {
       <ListGroup>
         {customers.map( (customer) => (
             <Container key={customer.customer_id} className="mb-3">
-              <ListGroup.Item onClick={ () => handleCustomerId(customer.customer_id)} className="li rounded border mb-2">{customer.name}</ListGroup.Item>
-              <Button onClick={ () => navigate(`/edit-customers/${customer.customer_id}`)} variant="outline-info" size="sm">Edit</Button>
-              <Button onClick={ () => handleDeleteCustomer(customer.customer_id)} variant="outline-danger" size="sm" className="ms-2">Delete</Button>
+              <ListGroup.Item onClick={ () => handleCustomerId(customer.customer_id)} className="li rounded border mb-2">Customer Id: {customer.customer_id} Name: {customer.name}</ListGroup.Item>
+              <ListGroup.Item onClick={ () => handleCustomerId(customer.customer_id)} className="li rounded border mb-2">Customer Phone: {customer.phone} Email: {customer.email}</ListGroup.Item>
+              <ListGroup.Item onClick={ () => handleCustomerId(customer.customer_id)} className="li rounded border mb-2">Birthday: {customer.birthday}</ListGroup.Item>
+              <Button onClick={ () => navigate(`/edit-customers/${customer.customer_id}`)} variant="btn btn-primary" size="sm">Edit</Button>
+              <Button onClick={ () => handleDeleteCustomer(customer.customer_id)} variant="btn btn-danger" size="sm" className="ms-2">Delete</Button>
             </Container>
         ))}
       </ListGroup>

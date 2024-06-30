@@ -68,11 +68,11 @@ function OrderList() {
     <Container className="border border-white rounded p-4 w-75">
       <h3>Orders</h3>
       <ListGroup>
-        {orders.map( (orders) => (
+        {orders.map( (order) => (
             <Container key={order.order_id} className="mb-3">
               <ListGroup.Item onClick={ () => handleOrderId(order.order_id)} className="li rounded border mb-2">{order.id}</ListGroup.Item>
-              <Button onClick={ () => navigate(`/edit-customers/${order.order_id}`)} variant="outline-info" size="sm">Edit</Button>
-              <Button onClick={ () => handleDeleteOrder(order.order_id)} variant="outline-danger" size="sm" className="ms-2">Delete</Button>
+              <Button onClick={ () => navigate(`/edit-customers/${order.order_id}`)} variant="btn btn-primary" size="sm">Edit</Button>
+              <Button onClick={ () => handleDeleteOrder(order.order_id)} variant="btn btn-danger" size="sm" className="ms-2">Delete</Button>
             </Container>
         ))}
       </ListGroup>
