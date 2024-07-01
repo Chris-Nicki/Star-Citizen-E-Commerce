@@ -67,7 +67,7 @@ function OrderForm() {
           } else {
             
                   try {
-                  const response = await axios.post(`http://127.0.0.1:5000/orders`,
+                  const response = await axios.post(` http://127.0.0.1:5000/orders`,
                     formData,
                     {
                       headers: {
@@ -77,7 +77,7 @@ function OrderForm() {
                   )
                   
                   console.log(response)
-                  setMessage(`Successfully Added Order: ${formData.order}`)
+                  setMessage(`Successfully Added Order: ${formData.orders}`)
                   // alert(`Submitted Customer: ${formData.name}`)
                   
                 } catch(error) {

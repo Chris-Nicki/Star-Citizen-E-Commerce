@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios'; 
 
+import './ProductList.module.css'
 
 function ProductList() {
   const navigate = useNavigate(); 
@@ -73,7 +74,7 @@ function ProductList() {
             </Container>
         ))}
       </ListGroup>
-      {selectedProductId && <ProductList productId={selectedProductId} />}
+      {/* {selectedProductId && <ProductList productId={selectedProductId} />} */}
     </Container>
   )
 }

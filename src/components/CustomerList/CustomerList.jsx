@@ -76,7 +76,7 @@ function CustomerList() {
             </Container>
         ))}
       </ListGroup>
-      {selectedCustomerId && <OrderList customerId={selectedCustomerId} />}
+      {/* {selectedCustomerId && <OrderList customerId={selectedCustomerId} />} */}
     </Container>
   )
 }

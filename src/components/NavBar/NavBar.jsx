@@ -25,10 +25,11 @@ function NavBar() {
           <Nav.Link className={style["nav-links"]} href="/customers">View Customers</Nav.Link>
           <Nav.Link className={style["nav-links"]} href="/add-orders">Add Orders</Nav.Link>
           <Nav.Link className={style["nav-links"]} href="/orders">View Orders</Nav.Link>
-          <Nav.Link className={style["nav-links"]} href="/add-reviews">Add Reviews</Nav.Link>
-          <Nav.Link className={style["nav-links"]} href="/reviews">View Reviews</Nav.Link>
           <Nav.Link className={style["nav-links"]} href="/add-products">Add Products</Nav.Link>
           <Nav.Link className={style["nav-links"]} href="/products">View Products</Nav.Link>
+          <Nav.Link className={style["nav-links"]} href="/add-reviews">Add Reviews</Nav.Link>
+          <Nav.Link className={style["nav-links"]} href="/reviews">View Reviews</Nav.Link>
+          
           
           
         </Nav>

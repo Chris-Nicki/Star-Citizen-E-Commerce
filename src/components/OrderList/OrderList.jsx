@@ -70,7 +70,8 @@ function OrderList() {
       <ListGroup>
         {orders.map( (order) => (
             <Container key={order.order_id} className="mb-3">
-              <ListGroup.Item onClick={ () => handleOrderId(order.order_id)} className="li rounded border mb-2">{order.id}</ListGroup.Item>
+              <ListGroup.Item onClick={ () => handleOrderId(order.order_id)} className="li rounded border mb-2">Order Id: {order.order_id} Customer Id: {order.customer_id}</ListGroup.Item>
+              <ListGroup.Item onClick={ () => handleOrderId(order.order_id)} className="li rounded border mb-2">Order Date: {order.date}</ListGroup.Item>
               <Button onClick={ () => navigate(`/edit-customers/${order.order_id}`)} variant="btn btn-primary" size="sm">Edit</Button>
               <Button onClick={ () => handleDeleteOrder(order.order_id)} variant="btn btn-danger" size="sm" className="ms-2">Delete</Button>
             </Container>
